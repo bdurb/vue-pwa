@@ -6,6 +6,14 @@
 
 <script>
   export default {
+    mounted() {
+      navigator.mediaDevices.getUserMedia({ video: true })
+      .then(mediaStream => {
+        this.$refs.video.srcObject = mediaStream
+        this.$refs.video.play()
+      })
+      .catch(err => console.error(err))
+    }
   }
 </script>
 
