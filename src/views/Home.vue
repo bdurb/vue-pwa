@@ -14,7 +14,7 @@ export default {
   name: 'home',
   methods: {
     handleClick(){
-      console.log('hello')
+      
     }
   }
 }
